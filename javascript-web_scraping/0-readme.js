@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
 var fs = require('fs');
-const filepath = process.argv[1];
+const filepath = process.argv[2];
 
-function Readfile(filepath) {
+function filereader(filepath) {
   fs.readFile(filepath,'utf-8', (err, data) => {
     if (err) {
       console.error(err);
@@ -12,3 +12,5 @@ function Readfile(filepath) {
     }
   });
 }
+
+filereader(filepath);
