@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-var fs = require('fs');
+const fs = require('fs');
 const filepath = process.argv[2];
 
 function filereader(filepath) {
