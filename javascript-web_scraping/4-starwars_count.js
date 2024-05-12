@@ -11,6 +11,7 @@ request.get(url, (error, response, body) => {
     return;
   }
   const filmData = JSON.parse(body).results;
-  const matches = filmData.filter(film => film.characters.includes(characterId));
+  const matches = filmData.filter(film => film.characters.includes(`https://swapi-api.hbtn.io/api/people/${characterId}`)
+  );
   console.log(matches.length);
 });
