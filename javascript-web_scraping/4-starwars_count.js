@@ -7,7 +7,7 @@ const characterId = 18;
 
 request.get(url, (error, response, body) => {
   if (error) {
-    console.error('Error:', error);
+    console.error(error);
     return;
   }
   const filmData = JSON.parse(body).results;
