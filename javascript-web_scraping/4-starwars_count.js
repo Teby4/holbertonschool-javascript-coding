@@ -11,7 +11,11 @@ request.get(url, (error, response, body) => {
     return;
   }
   const filmData = JSON.parse(body).results;
-  const matches = filmData.filter(film => film.characters.includes(`https://swapi-api.hbtn.io/api/people/${characterId}`)
-  );
-  console.log(matches.length);
+  let matches = 0;
+  filmData.forEach(film => {
+    if (film.characters.includes(`https://swapi-api.hbtn.io/api/people/${characterId}/`)) {
+      matches++;
+    }
+  });
+  console.log(matches);
 });
