@@ -8,7 +8,7 @@ const readline = require('readline').createInterface({
 console.log("Welcome to Holberton School, what is your name?");
 
 readline.question('', (name) => {
-  console.log(`Your name is: ${name.trim()}\r\n`);
+  console.log(`Your name is: ${name.trim()}`);
   readline.close();
 });
 
