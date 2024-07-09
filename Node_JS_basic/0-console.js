@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function displayMessage (arg) {
+function displayMessage(arg) {
   console.log(arg);
 }
 
